@@ -1,0 +1,14 @@
+Part 1-A Simulation Results
+Battleship: USS Iowa (Notation: U) at (500.00, 500.00)
+Result: Battleship SURVIVED!
+Escort Ship #1 was hit by Battleship!
+Escort Ship #2 was hit by Battleship!
+Escort Ship #3 was hit by Battleship!
+Escort Ship #4 was hit by Battleship!
+Escort Ship #5 was hit by Battleship!
+Escort Ship #6 was hit by Battleship!
+Escort Ship #7 was hit by Battleship!
+Escort Ship #8 was hit by Battleship!
+Escort Ship #9 was hit by Battleship!
+Escort Ship #10 was hit by Battleship!
+Total Escort Ships hit by Battleship: 10 / 10
