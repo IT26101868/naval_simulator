@@ -24,6 +24,7 @@ typedef struct{
     int firings_count;
 } EscortShip;
 
+
 typedef struct{
     char name[30];
     char notation;
@@ -44,5 +45,6 @@ void initialize_escort_types(EscortType types[]);
 void generate_escort_ships(EscortShip ships[], int n, double canvas_size);
 void save_initial_state(const char *filename, Battleship b, EscortShip ships[], int n, EscortType types[], double canvas_size);
 void save_part_1a_results(const char *filename, Battleship b, EscortShip ships[], int n, int b_sunk, int sinking_e_id);
+
 
 #endif

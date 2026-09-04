@@ -37,6 +37,8 @@ void initialize_escort_types(EscortType types[]){
     types[4] = (EscortType){"Japanese kaibokan", 'E', 0.04, 70.0, 140.0, 60.0, 200.0, 0.08};
 }
 
+
+
 void generate_escort_ships(EscortShip ships[], int n, double canvas_size){
     for (int i = 0; i < n; i++){
         ships[i].id = i + 1;
@@ -55,6 +57,11 @@ int is_in_escort_range(EscortShip e, EscortType type, Battleship b){
 
     return (dist >= min_r && dist <= max_r);
 
+}
+
+double calculate_time_to_hit(double distance, double v_max){
+    double v = v_max * cos(deg_to_rad(45.0));
+    return distance / v; 
 }
 
 void save_initial_state(const char *filename, Battleship b, EscortShip ships[], int n, EscortType types[], double canvas_size){
@@ -90,18 +97,30 @@ void save_part_1a_results(const char *filename, Battleship b, EscortShip ships[]
     } else {
         fprintf(file, "Result: Battleship SURVIVED!\n");
         int es_hit_count = 0;
+        double max_time_to_hit = 0.0;
+
         for (int i = 0; i < n; i++){
             if(is_in_battleship_range(b, ships[i])){
                 es_hit_count++;
-                fprintf(file, "Escort Ship #%d was hit by Battleship!\n", ships[i].id);
+                double dist = calculate_distance(b.x, b.y, ships[i].x, ships[i].y);
+                double time_to_hit = calculate_time_to_hit(dist, b.v_max);
+
+                if (time_to_hit > max_time_to_hit){
+                    max_time_to_hit = time_to_hit;
+                }
+
+                fprintf(file, "Escort Ship #%d was hit by Battleship! [Position : (%.2f, %.2f)] [Time to hit : %.2fs]\n", ships[i].id, ships[i].x, ships[i].y, time_to_hit);
             }
         }
         fprintf(file, "Total Escort Ships hit by Battleship: %d / %d\n", es_hit_count, n);
+        fprintf(file, "Battle Duration: %.2fs\n", max_time_to_hit);
     }
 
     fclose(file);
     printf("Part 1-A results saved to %s\n", filename);
 }
+
+
 
 void run_part_1a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], double canvas_size){
     printf("\n********Running Part 1-A Simulation********\n");
@@ -125,13 +144,19 @@ void run_part_1a_simulation(Battleship b, EscortShip ships[], int n, EscortType 
         printf("Result : Battleship %s WAS SUNK by Escort Ship #%d !\n", b.name, sinking_e_index);
     } else {
         printf("Result : Battleship %s SURVIVED!\n", b.name);
+        double max_time_to_hit = 0.0;
         for (int i = 0; i < n; i++ ){
             if(is_in_battleship_range(b, ships[i])){
                 es_hit_count++;
+                double dist = calculate_distance(b.x, b.y, ships[i].x, ships[i].y);
+                double time_to_hit = calculate_time_to_hit(dist, b.v_max);
+                if (time_to_hit > max_time_to_hit){
+                    max_time_to_hit = time_to_hit;
+                }
             }
         }
         printf("Total Escort Ships hit by Battleship: %d / %d\n", es_hit_count, n);
-
+        printf("Battle Duration: %.2fs\n", max_time_to_hit);
     }
     save_part_1a_results("part_1a_results.txt", b, ships, n, b_sunk, sinking_e_index);
 }
