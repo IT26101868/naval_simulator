@@ -93,10 +93,14 @@ void save_part_1a_results(const char *filename, Battleship b, EscortShip ships[]
 
     fprintf(file, "Part 1-A Simulation Results\n");
     fprintf(file, "Battleship: %s (Notation: %c) at (%.2f, %.2f)\n", b.name, b.notation, b.x, b.y);
+    fprintf(file, "Battleship Health: %.2f%%\n", b.health * 100.0);
+    fprintf(file, "Total damage taken by Battleship: %.2f%%\n", (1.0 - b.health) * 100.0);
     if (b_sunk){
-        fprintf(file, "Result: Battleship WAS SUNK by Escort Ship #%d!\n", sinking_e_id);
+        fprintf(file, "Result: Battleship WAS SUNK (final HIT by Escort Ship #%d)\n", sinking_e_id);
     } else {
         fprintf(file, "Result: Battleship SURVIVED!\n");
+        fprintf(file, "Escort Ships taken down by Battleship:\n");
+
         int es_hit_count = 0;
         double max_time_to_hit = 0.0;
 
@@ -125,26 +129,36 @@ void save_part_1a_results(const char *filename, Battleship b, EscortShip ships[]
 
 void run_part_1a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], double canvas_size){
     printf("\n********Running Part 1-A Simulation********\n");
-    
+    printf("with Part 1-C Damage Mechanics\n\n)");
     save_initial_state("initial_state.txt", b, ships, n, types, canvas_size);
 
+    double total_damage_pct = 0.0;
+    int attacker_count = 0;
     int b_sunk = 0;
     int sinking_e_index = -1;
     int es_hit_count = 0;
 
     for (int i = 0; i < n; i++){
-        if (!ships[i].is_destroyed){
-            if(is_in_escort_range(ships[i], types[ships[i].type_index], b)){
+        if (is_in_escort_range(ships[i], types[ships[i].type_index], b)){
+            attacker_count++;
+            double damage = types[ships[i].type_index].impact_power * (1.0 - b.gamma);
+            total_damage_pct += damage; 
+
+            printf(">>>Escort Ship #%d HIT Battleship! (Damage: %.2f%%) | Total Damage: %.2f%%\n", ships[i].id, damage * 100.0, total_damage_pct *  100.0);
+
+            if (total_damage_pct >= b.health){
                 b_sunk = 1;
                 sinking_e_index = ships[i].id;
-                break;            
+                break;
             }
         }
     }
+    b.health -= total_damage_pct;
     if (b_sunk) {
-        printf("Result : Battleship %s WAS SUNK by Escort Ship #%d !\n", b.name, sinking_e_index);
+        printf("Result : Battleship %s WAS SUNK by Escort Ships !\n", b.name);
     } else {
         printf("Result : Battleship %s SURVIVED!\n", b.name);
+        printf("Total Damage Taken: %.2f%% | Remaining Health: %.2f%%\n", total_damage_pct * 100.0, b.health * 100.0);
         double max_time_to_hit = 0.0;
         for (int i = 0; i < n; i++ ){
             if(is_in_battleship_range(b, ships[i])){
