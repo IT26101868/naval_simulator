@@ -1,0 +1,17 @@
+******* Part 2-A Simulation Results *******
+Battleship Reload Time: 3.43s
+Attack Strategy: Priority based on Threat Level (Impact Power / Distance)
+
+--- Step 1 [Position: (500.00, 400.00)] ---
+Attack Order #1 -> Escort #1 | Dist: 82.03m | Flight Time: 0.46s | Reload Time: 3.43s | Total Simulation Time: 3.89s
+Attack Order #2 -> Escort #4 | Dist: 1634.10m | Flight Time: 9.24s | Reload Time: 3.43s | Total Simulation Time: 16.56s
+Attack Order #3 -> Escort #5 | Dist: 2224.27m | Flight Time: 12.58s | Reload Time: 3.43s | Total Simulation Time: 32.57s
+Attack Order #4 -> Escort #2 | Dist: 1794.28m | Flight Time: 10.15s | Reload Time: 3.43s | Total Simulation Time: 46.14s
+Attack Order #5 -> Escort #3 | Dist: 2408.38m | Flight Time: 13.62s | Reload Time: 3.43s | Total Simulation Time: 63.19s
+--- Step 2 [Position: (300.00, 1800.00)] ---
+--- Step 3 [Position: (1700.00, 1550.00)] ---
+--- Step 4 [Position: (2000.00, 2500.00)] ---
+
+Result: Battleship USS Iowa SURVIVED all 4 path steps! (Remaining Health: 94.00%)
+Total Escorts Destroyed: 5 / 5
+Total Battle Time: 63.19s

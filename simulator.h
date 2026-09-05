@@ -31,6 +31,8 @@ typedef struct{
     double health;
     double gamma;
     int firings_count;
+    double reload_time;
+    double last_firing_time;
 } Battleship;
 
 typedef struct{
@@ -40,6 +42,7 @@ typedef struct{
 
 
 double calculate_distance(double x1, double y1, double x2, double y2);
+double calculate_time_to_hit(double distance, double v_max);
 double get_battleship_max_range(double v_max);
 int is_in_battleship_range(Battleship b, EscortShip e);
 int is_in_escort_range(EscortShip e, EscortType type, Battleship b);
@@ -54,5 +57,8 @@ void run_part_1a_simulation(Battleship b, EscortShip ships[], int n, EscortType 
 int check_gun_jam(int firings_count);
 void save_part_1b_results(const char *filename, Battleship b, EscortShip ships[], int n, int b_sunk, int total_steps );
 void run_part_1b_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
+
+int select_optimal_target(Battleship b, EscortShip ships[], int n, EscortType types[]);
+void run_part2a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
 
 #endif

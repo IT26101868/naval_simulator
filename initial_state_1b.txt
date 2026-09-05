@@ -1,24 +1,9 @@
 Initial State of Simulation
-Canvas Size: 10000.00 m x 10000.00 m
+Canvas Size: 3000.00 m x 3000.00 m
 Battleship: USS Iowa (Notation: U) at (500.00, 500.00) with max shell velocity 250.00 m/s
 Escort Ships:
-Escort Ship #1: Type: F-class Escort Ship (Notation: D) at (1906.31, 4221.17) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
-Escort Ship #2: Type: F-class Escort Ship (Notation: D) at (9534.92, 1380.39) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
-Escort Ship #3: Type: Japanese kaibokan (Notation: E) at (6376.74, 6789.00) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s
-Escort Ship #4: Type: Japanese kaibokan (Notation: E) at (1070.38, 9933.60) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s
-Escort Ship #5: Type: Matsu-class Destroyer (Notation: C) at (4567.10, 4804.82) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
-Escort Ship #6: Type: Gabbiano-class corvette (Notation: B) at (3914.38, 2078.49) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
-Escort Ship #7: Type: 1936A-class Destroyer (Notation: A) at (882.01, 5309.37) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
-Escort Ship #8: Type: Gabbiano-class corvette (Notation: B) at (4525.11, 352.66) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
-Escort Ship #9: Type: Gabbiano-class corvette (Notation: B) at (6482.64, 3329.95) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
-Escort Ship #10: Type: Gabbiano-class corvette (Notation: B) at (2625.71, 6250.27) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
-Escort Ship #11: Type: Matsu-class Destroyer (Notation: C) at (2850.24, 8156.58) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
-Escort Ship #12: Type: F-class Escort Ship (Notation: D) at (909.91, 7691.51) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
-Escort Ship #13: Type: 1936A-class Destroyer (Notation: A) at (1816.67, 4068.25) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
-Escort Ship #14: Type: 1936A-class Destroyer (Notation: A) at (7996.45, 5138.63) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
-Escort Ship #15: Type: Japanese kaibokan (Notation: E) at (2923.07, 9705.73) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s
-Escort Ship #16: Type: F-class Escort Ship (Notation: D) at (3999.37, 3620.11) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
-Escort Ship #17: Type: Matsu-class Destroyer (Notation: C) at (5198.37, 4502.12) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
-Escort Ship #18: Type: F-class Escort Ship (Notation: D) at (6181.16, 9027.24) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
-Escort Ship #19: Type: Japanese kaibokan (Notation: E) at (4714.00, 5509.87) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s
-Escort Ship #20: Type: F-class Escort Ship (Notation: D) at (5311.92, 8135.58) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
+Escort Ship #1: Type: Japanese kaibokan (Notation: E) at (2251.68, 2184.05) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s
+Escort Ship #2: Type: F-class Escort Ship (Notation: D) at (540.00, 882.67) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
+Escort Ship #3: Type: Matsu-class Destroyer (Notation: C) at (2498.87, 1967.55) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
+Escort Ship #4: Type: Gabbiano-class corvette (Notation: B) at (1636.04, 2288.97) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
+Escort Ship #5: Type: Japanese kaibokan (Notation: E) at (1570.11, 2942.08) | Max angle: 140.00 degrees, Min angle: 70.00 degrees | v_max: 200.00 m/s, v_min: 60.00 m/s

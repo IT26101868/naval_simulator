@@ -64,6 +64,23 @@ double calculate_time_to_hit(double distance, double v_max){
     return distance / v; 
 }
 
+int select_optimal_target(Battleship b, EscortShip ships[], int n, EscortType types[]){
+    int best_target = -1;
+    double max_threat = -1.0;
+
+    for (int i = 0; i < n; i++){
+        if (!ships[i].is_destroyed && is_in_battleship_range(b, ships[i])){
+            double dist = calculate_distance(b.x, b.y, ships[i].x, ships[i].y);
+            double threat = types[ships[i].type_index].impact_power / (dist + 1.0); // Threat level based on impact power and distance
+            if (threat > max_threat){
+                max_threat = threat;
+                best_target = i;
+            }
+        }
+    }
+    return best_target;
+}
+
 void save_initial_state(const char *filename, Battleship b, EscortShip ships[], int n, EscortType types[], double canvas_size){
     FILE *file = fopen(filename, "w");
     if (file == NULL){
@@ -282,5 +299,86 @@ void run_part_1b_simulation(Battleship b, EscortShip ships[], int n, EscortType 
     
 }
 
+void run_part2a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size){
+    printf("\n******** Running Part 2-A Simulation ********\n");
 
+    FILE *file = fopen("part_2a_results.txt", "w");
+    if (file == NULL){
+        printf("Error opening file part_2a_results.txt for writing.\n");
+        return;
+    }
+    save_initial_state("initial_state_part2a.txt", b, ships, n, types, canvas_size);
 
+    fprintf(file, "******* Part 2-A Simulation Results *******\n");
+    fprintf(file, "Battleship Reload Time: %.2fs\n", b.reload_time);
+    fprintf(file, "Attack Strategy: Priority based on Threat Level (Impact Power / Distance)\n\n");
+
+    int escort_destroyed_count = 0;
+    double simulation_time = 0.0;
+    int b_sunk = 0;
+
+    for (int step = 0; step < path_len && !b_sunk; step++){
+        b.x = path[step].x;
+        b.y = path[step].y;
+        printf("\nStep %d: Battleship's current position : (%.2f, %.2f)\n", step + 1, b.x, b.y);
+        fprintf(file, "--- Step %d [Position: (%.2f, %.2f)] ---\n", step + 1, b.x, b.y);
+
+        // 1. All Escort Ships in range return fire
+        for (int i = 0; i < n; i++){
+            if (!ships[i].is_destroyed && is_in_escort_range(ships[i], types[ships[i].type_index], b)){
+                double damage = types[ships[i].type_index].impact_power * (1.0 - b.gamma);
+                b.health -= damage;
+                printf(">> Escort Ship #%d HIT Battleship! | Damage: %.2f%% | Health: %.2f%%\n", 
+                       ships[i].id, damage * 100.0, b.health * 100.0);
+                
+                if (b.health <= 0.0){
+                    b_sunk = 1;
+                    printf("Result: Battleship %s WAS SUNK by Escort Ship #%d at step %d!\n", b.name, ships[i].id, step + 1);
+                    fprintf(file, "Result: Battleship %s WAS SUNK by Escort Ship #%d at step %d!\n", b.name, ships[i].id, step + 1);
+                    break;
+                }
+            }
+        }
+        
+        while (!b_sunk) {
+            int target_index = select_optimal_target(b, ships, n, types);
+            if (target_index == -1) {
+                printf("  [STRATEGY] No more Escort Ships in range at this waypoint.\n");
+                break;
+            }
+
+            ships[target_index].is_destroyed = 1;
+            escort_destroyed_count++;
+            b.firings_count++;
+
+            double dist = calculate_distance(b.x, b.y, ships[target_index].x, ships[target_index].y);
+            double time_to_hit = calculate_time_to_hit(dist, b.v_max);
+            simulation_time += time_to_hit + b.reload_time;
+
+            printf("  [STRATEGY] Target Priority Selected: Escort Ship #%d (Type: %c | Dist: %.2fm)\n",
+                   ships[target_index].id, types[ships[target_index].type_index].notation, dist);
+            printf("  -> [Time: %.2fs] Battleship FIRED at Escort #%d! (Flight: %.2fs | Reload: %.2fs)\n",
+                   simulation_time, ships[target_index].id, time_to_hit, b.reload_time);           
+            
+            fprintf(file, "Attack Order #%d -> Escort #%d | Dist: %.2fm | Flight Time: %.2fs | Reload Time: %.2fs | Total Simulation Time: %.2fs\n",
+                    b.firings_count, ships[target_index].id, dist, time_to_hit, b.reload_time, simulation_time);
+        }
+    }
+
+    // 3. Print Survival Summary if Battleship reached the destination
+    if (!b_sunk) {
+        printf("\nResult: Battleship %s SURVIVED all %d path steps! (Remaining Health: %.2f%%)\n", 
+               b.name, path_len, b.health * 100.0);
+        fprintf(file, "\nResult: Battleship %s SURVIVED all %d path steps! (Remaining Health: %.2f%%)\n", 
+                b.name, path_len, b.health * 100.0);
+    }
+
+    fprintf(file, "Total Escorts Destroyed: %d / %d\n", escort_destroyed_count, n);
+    fprintf(file, "Total Battle Time: %.2fs\n", simulation_time);
+    if (file) fclose(file);
+    printf("Part 2-A results saved to part_2a_results.txt\n");
+}
+    
+    
+
+      
