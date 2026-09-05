@@ -1,0 +1,45 @@
+*******Part 1-B Simulation Results*******
+Total Steps Taken: 4
+Battleship: USS Iowa (Notation: U) | (Position: (900.00, 900.00)) | Health: 19.00
+Result: Battleship SURVIVED and reached the destination!
+ -Escort Ships Status:
+  -Escort Ship #1: SURVIVED | Position: (7398.59, 9886.72))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #2: SURVIVED | Position: (3104.07, 6916.10))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #3: SURVIVED | Position: (9696.30, 6760.65))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #4: SURVIVED | Position: (4453.45, 6482.84))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #5: DESTROYED
+  Total Escort Ships Destroyed: 1
+  -Escort Ship #6: SURVIVED | Position: (6372.46, 7264.42))
+  Total Escort Ships Destroyed: 1
+  -Escort Ship #7: SURVIVED | Position: (8207.43, 1170.80))
+  Total Escort Ships Destroyed: 1
+  -Escort Ship #8: SURVIVED | Position: (7118.81, 5025.21))
+  Total Escort Ships Destroyed: 1
+  -Escort Ship #9: DESTROYED
+  Total Escort Ships Destroyed: 2
+  -Escort Ship #10: DESTROYED
+  Total Escort Ships Destroyed: 3
+  -Escort Ship #11: DESTROYED
+  Total Escort Ships Destroyed: 4
+  -Escort Ship #12: SURVIVED | Position: (9536.98, 3740.35))
+  Total Escort Ships Destroyed: 4
+  -Escort Ship #13: DESTROYED
+  Total Escort Ships Destroyed: 5
+  -Escort Ship #14: SURVIVED | Position: (5223.80, 7890.10))
+  Total Escort Ships Destroyed: 5
+  -Escort Ship #15: SURVIVED | Position: (8259.16, 1208.96))
+  Total Escort Ships Destroyed: 5
+  -Escort Ship #16: SURVIVED | Position: (1949.31, 7581.42))
+  Total Escort Ships Destroyed: 5
+  -Escort Ship #17: DESTROYED
+  Total Escort Ships Destroyed: 6
+  -Escort Ship #18: SURVIVED | Position: (7603.54, 2907.65))
+  Total Escort Ships Destroyed: 6
+  -Escort Ship #19: SURVIVED | Position: (9588.19, 7151.15))
+  Total Escort Ships Destroyed: 6
+  -Escort Ship #20: SURVIVED | Position: (8949.22, 7481.66))
+  Total Escort Ships Destroyed: 6

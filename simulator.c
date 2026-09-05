@@ -83,6 +83,7 @@ void save_initial_state(const char *filename, Battleship b, EscortShip ships[], 
     printf("Initial state saved to %s\n", filename);
 }
 
+
 void save_part_1a_results(const char *filename, Battleship b, EscortShip ships[], int n, int b_sunk, int sinking_e_id){
     FILE *file = fopen(filename, "w");
     if (file == NULL){
@@ -161,7 +162,111 @@ void run_part_1a_simulation(Battleship b, EscortShip ships[], int n, EscortType 
     save_part_1a_results("part_1a_results.txt", b, ships, n, b_sunk, sinking_e_index);
 }
 
+int check_gun_jam(int firings_count){
+    double jam_probability = 0.05 * firings_count;
+    double roll = get_random_double(0.0, 1.0);
+    return roll < jam_probability;
+}
 
+void save_part_1b_results(const char *filename, Battleship b, EscortShip ships[], int n, int b_sunk, int total_steps ){ 
+    
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("Error opening file %s for writing.\n", filename);
+        return;
+    }
+    fprintf(file, "*******Part 1-B Simulation Results*******\n");
+    fprintf(file, "Total Steps Taken: %d\n", total_steps);
+    fprintf(file, "Battleship: %s (Notation: %c) | (Position: (%.2f, %.2f)) | Health: %.2f\n", b.name, b.notation, b.x, b.y, b.health * 100.0);
+
+    if (b_sunk) {
+        fprintf(file, "Result: Battleship WAS SUNK!\n");
+    } else {
+        fprintf(file, "Result: Battleship SURVIVED and reached the destination!\n");
+        fprintf(file, " -Escort Ships Status:\n");
+        int destroyed_count = 0;
+        for (int i = 0; i < n; i++) {
+            if(ships[i].is_destroyed){
+                destroyed_count++;
+                fprintf(file, "  -Escort Ship #%d: DESTROYED\n", ships[i].id);
+            } else {
+                fprintf(file, "  -Escort Ship #%d: SURVIVED | Position: (%.2f, %.2f))\n", ships[i].id, ships[i].x, ships[i].y);
+            }
+            fprintf(file, "  Total Escort Ships Destroyed: %d\n", destroyed_count);
+        }
+        fclose(file);
+        printf("Part 1-B results saved to %s\n", filename);
+    }
+}
+
+void run_part_1b_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size){
+    printf("\n####### Running Part 1-B Simulation #######\n");
+
+    save_initial_state("initial_state_1b.txt", b, ships, n, types, canvas_size);
+
+    int b_sunk = 0;
+    int step = 0;
+
+    for (step = 0; step < path_len; step++) {
+        b.x = path[step].x;
+        b.y = path[step].y;
+        printf("Step %d: Battleship's current position : %.2f, %.2f \n", step + 1, b.x, b.y);
+
+        for (int i = 0; i < n; i++){
+            if(!ships[i].is_destroyed){
+                if (is_in_escort_range(ships[i], types[ships[i].type_index],b)){
+                    ships[i].firings_count++;
+                    
+                    if (check_gun_jam(ships[i].firings_count)){
+                        printf("***Escort Ship #%d GUN JAMMED! \n", ships[i].id);
+                    } else{
+                        double damage = types[ships[i].type_index].impact_power * (1.0 - b.gamma);
+                        b.health -= damage;
+                        printf(">>Escort Ship #%d HIT Battleship! (B health: %.2f%%)\n)", ships[i].id, b.health * 100.0);
+
+                        if (b.health <= 0.0){
+                            b_sunk = 1;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (b_sunk){
+            printf("\nResult: Battleship %s was SUNK at step %d!\n", b.name, step + 1);
+            break;
+        }
+
+        int active_escorts_exist = 0;
+        for (int i = 0; i < n; i++){
+            if (!ships[i].is_destroyed){
+                active_escorts_exist = 1;
+                break;
+            }
+        }
+        if (active_escorts_exist) {
+            if (check_gun_jam(b.firings_count)) {
+            printf(">>>Battleship %s GUN JAMMED this turn!\n", b.name);
+            } else {
+                b.firings_count++;
+                for (int i = 0; i < n; i++){
+                    if (!ships[i].is_destroyed && is_in_battleship_range(b, ships[i])) {
+                        ships[i].is_destroyed = 1;
+                        printf(">>> Battleship DESTROYED Escort Ship #%d!\n", ships[i].id);
+                    }
+                }
+            }
+        }
+
+    }
+
+    if (!b_sunk) {
+        printf("\nResult: Battleship %s SURVIVED all %d path steps!\n", b.name, path_len);
+    }
+    save_part_1b_results("part_1b_results.txt", b, ships, n, b_sunk, step + (b_sunk ? 1:0));
+    
+}
 
 
 

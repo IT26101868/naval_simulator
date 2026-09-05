@@ -1,0 +1,14 @@
+Initial State of Simulation
+Canvas Size: 1000.00 m x 1000.00 m
+Battleship: USS Iowa (Notation: U) at (500.00, 500.00) with max shell velocity 250.00 m/s
+Escort Ships:
+Escort Ship #1: Type: Gabbiano-class corvette (Notation: B) at (370.78, 834.08) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
+Escort Ship #2: Type: 1936A-class Destroyer (Notation: A) at (549.36, 786.03) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
+Escort Ship #3: Type: Gabbiano-class corvette (Notation: B) at (868.43, 133.36) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
+Escort Ship #4: Type: F-class Escort Ship (Notation: D) at (666.90, 304.58) | Max angle: 100.00 degrees, Min angle: 50.00 degrees | v_max: 220.00 m/s, v_min: 70.00 m/s
+Escort Ship #5: Type: 1936A-class Destroyer (Notation: A) at (500.52, 810.51) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
+Escort Ship #6: Type: Matsu-class Destroyer (Notation: C) at (717.58, 1.96) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
+Escort Ship #7: Type: 1936A-class Destroyer (Notation: A) at (492.28, 621.37) | Max angle: 40.00 degrees, Min angle: 20.00 degrees | v_max: 300.00 m/s, v_min: 100.00 m/s
+Escort Ship #8: Type: Gabbiano-class corvette (Notation: B) at (200.60, 424.86) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
+Escort Ship #9: Type: Matsu-class Destroyer (Notation: C) at (80.83, 63.10) | Max angle: 50.00 degrees, Min angle: 25.00 degrees | v_max: 280.00 m/s, v_min: 90.00 m/s
+Escort Ship #10: Type: Gabbiano-class corvette (Notation: B) at (106.62, 216.80) | Max angle: 60.00 degrees, Min angle: 30.00 degrees | v_max: 250.00 m/s, v_min: 80.00 m/s
