@@ -31,14 +31,15 @@ int main(){
     printf("2. Part 1-B Simulation\n");
     printf("3. Part 2-A Simulation (Target Priority & Reload Time)\n");
     printf("4. Part 2-B Simulation (Continuous Escorts Reloads)\n");
-    printf("Enter your choice (1 - 4): ");
+    printf("5. Part 2-C Simulation (Power Law Impact Power Decay)");
+    printf("Enter your choice (1 - 5): ");
     scanf("%d", &choice);
 
     if (choice == 1) {
         run_part_1a_simulation(b, ships, num_ships, types, canvas_size);
     } else if (choice == 2) {
         run_part_1b_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
-    } else if (choice == 3 || choice == 4) {
+    } else if (choice == 3 || choice == 4 || choice == 5) {
         int custom_input = 0;
         printf("Do you want to specify Battlehsip Reload Time? (1 for Yes, 0 for No): ");
         scanf("%d", &custom_input);
@@ -51,8 +52,10 @@ int main(){
         }
         if (choice == 3) {
             run_part2a_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
-        } else {
+        } else if (choice == 4) {
             run_part2b_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
+        }else{
+            run_part2c_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
         }
     } else {
         printf("Invalid choice. Exiting.\n");

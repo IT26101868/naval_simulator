@@ -13,7 +13,7 @@ typedef struct {
     double min_vel;
     double max_vel;
     double gamma;
-    double relod_time;
+    double reload_time;
 } EscortType;
 
 typedef struct{
@@ -63,4 +63,8 @@ void run_part_1b_simulation(Battleship b, EscortShip ships[], int n, EscortType 
 int select_optimal_target(Battleship b, EscortShip ships[], int n, EscortType types[]);
 void run_part2a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
 void run_part2b_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
+
+double calculated_decayed_impact_power(double ip_0, double gamma, int firings_count);
+void run_part2c_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
+
 #endif
