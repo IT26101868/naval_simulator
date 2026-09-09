@@ -9,17 +9,17 @@ int main(){
     EscortType types[MAX_ESCORT_TYPES];
     initialize_escort_types(types);
 
-    int num_ships = 5;
-    double canvas_size = 3000.0;
-    EscortShip ships[5];
+    int num_ships = 10;
+    double canvas_size = 10000.0;
+    EscortShip ships[10];
 
     Battleship b = {"USS Iowa", 'U', 500.0, 500.0, 250.0, 1.0, 0.0, 0, 5.0, 0.0};
 
     Point path [] = {
-        {500.0, 400.0},
-        {300.0, 1800.0},
-        {1700.0, 1550.0},
-        {2000.0, 2500.0}
+        {500.0, 500.0},
+        {1800.0, 1800.0},
+        {3200.0, 3200.0},
+        {4500.0, 4500.0}
     };
     int path_len = sizeof(path) / sizeof(path[0]);
     
@@ -30,14 +30,15 @@ int main(){
     printf("1. Part 1-A Simulation\n");
     printf("2. Part 1-B Simulation\n");
     printf("3. Part 2-A Simulation (Target Priority & Reload Time)\n");
-    printf("Enter your choice (1, 2, or 3): ");
+    printf("4. Part 2-B Simulation (Continuous Escorts Reloads)\n");
+    printf("Enter your choice (1 - 4): ");
     scanf("%d", &choice);
 
     if (choice == 1) {
         run_part_1a_simulation(b, ships, num_ships, types, canvas_size);
     } else if (choice == 2) {
         run_part_1b_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
-    } else if (choice == 3) {
+    } else if (choice == 3 || choice == 4) {
         int custom_input = 0;
         printf("Do you want to specify Battlehsip Reload Time? (1 for Yes, 0 for No): ");
         scanf("%d", &custom_input);
@@ -48,7 +49,11 @@ int main(){
             b.reload_time = get_random_double(1.0, 10.0);
             printf("Randomly assigned Battleship Reload Time: %.2f seconds\n", b.reload_time);
         }
-        run_part2a_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
+        if (choice == 3) {
+            run_part2a_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
+        } else {
+            run_part2b_simulation(b, ships, num_ships, types, path, path_len, canvas_size);
+        }
     } else {
         printf("Invalid choice. Exiting.\n");
         return 1;

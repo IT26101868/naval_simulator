@@ -1,15 +1,16 @@
 Part 1-A Simulation Results
 Battleship: USS Iowa (Notation: U) at (500.00, 500.00)
-Battleship Health: 58.00%
-Total damage taken by Battleship: 42.00%
+Battleship Health: 79.00%
+Total damage taken by Battleship: 21.00%
 Result: Battleship SURVIVED!
 Escort Ships taken down by Battleship:
-Escort Ship #5 was hit by Battleship! [Position : (1167.55, 2149.23)] [Time to hit : 10.06s]
-Escort Ship #7 was hit by Battleship! [Position : (2736.71, 3506.12)] [Time to hit : 21.20s]
-Escort Ship #11 was hit by Battleship! [Position : (2318.11, 5841.20)] [Time to hit : 31.92s]
-Escort Ship #12 was hit by Battleship! [Position : (2847.04, 4277.92)] [Time to hit : 25.16s]
-Escort Ship #13 was hit by Battleship! [Position : (4322.03, 5079.46)] [Time to hit : 33.74s]
-Escort Ship #14 was hit by Battleship! [Position : (2647.06, 4202.92)] [Time to hit : 24.21s]
-Escort Ship #20 was hit by Battleship! [Position : (1380.82, 2058.78)] [Time to hit : 10.13s]
-Total Escort Ships hit by Battleship: 7 / 20
-Battle Duration: 33.74s
+Escort Ship #1 was hit by Battleship! [Position : (4364.01, 4843.73)] [Time to hit : 32.89s]
+Escort Ship #2 was hit by Battleship! [Position : (1721.91, 4248.86)] [Time to hit : 22.30s]
+Escort Ship #4 was hit by Battleship! [Position : (1869.94, 1853.29)] [Time to hit : 10.89s]
+Escort Ship #5 was hit by Battleship! [Position : (1429.06, 3652.62)] [Time to hit : 18.59s]
+Escort Ship #6 was hit by Battleship! [Position : (4395.00, 4181.80)] [Time to hit : 30.32s]
+Escort Ship #7 was hit by Battleship! [Position : (1634.32, 5569.58)] [Time to hit : 29.39s]
+Escort Ship #9 was hit by Battleship! [Position : (2501.76, 5226.16)] [Time to hit : 29.03s]
+Escort Ship #10 was hit by Battleship! [Position : (2666.70, 6423.00)] [Time to hit : 35.68s]
+Total Escort Ships hit by Battleship: 8 / 10
+Battle Duration: 35.68s

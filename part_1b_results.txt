@@ -1,6 +1,6 @@
 *******Part 1-B Simulation Results*******
 Total Steps Taken: 4
-Battleship: USS Iowa (Notation: U) | (Position: (2000.00, 2500.00)) | Health: 87.00
+Battleship: USS Iowa (Notation: U) | (Position: (4500.00, 4500.00)) | Health: 71.00
 Result: Battleship SURVIVED and reached the destination!
  -Escort Ships Status:
   -Escort Ship #1: DESTROYED
@@ -13,3 +13,13 @@ Result: Battleship SURVIVED and reached the destination!
   Total Escort Ships Destroyed: 4
   -Escort Ship #5: DESTROYED
   Total Escort Ships Destroyed: 5
+  -Escort Ship #6: DESTROYED
+  Total Escort Ships Destroyed: 6
+  -Escort Ship #7: DESTROYED
+  Total Escort Ships Destroyed: 7
+  -Escort Ship #8: DESTROYED
+  Total Escort Ships Destroyed: 8
+  -Escort Ship #9: DESTROYED
+  Total Escort Ships Destroyed: 9
+  -Escort Ship #10: DESTROYED
+  Total Escort Ships Destroyed: 10

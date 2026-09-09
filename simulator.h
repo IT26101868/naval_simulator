@@ -13,6 +13,7 @@ typedef struct {
     double min_vel;
     double max_vel;
     double gamma;
+    double relod_time;
 } EscortType;
 
 typedef struct{
@@ -21,6 +22,7 @@ typedef struct{
     double x, y;
     int is_destroyed;
     int firings_count;
+    double last_firing_time;
 } EscortShip;
 
 typedef struct{
@@ -60,5 +62,5 @@ void run_part_1b_simulation(Battleship b, EscortShip ships[], int n, EscortType 
 
 int select_optimal_target(Battleship b, EscortShip ships[], int n, EscortType types[]);
 void run_part2a_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
-
+void run_part2b_simulation(Battleship b, EscortShip ships[], int n, EscortType types[], Point path[], int path_len, double canvas_size);
 #endif
