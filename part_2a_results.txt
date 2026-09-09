@@ -1,17 +1,27 @@
 ******* Part 2-A Simulation Results *******
-Battleship Reload Time: 9.39s
+Battleship Reload Time: 8.29s
 Attack Strategy: Priority based on Threat Level (Impact Power / Distance)
 
---- Step 1 [Position: (500.00, 400.00)] ---
-Attack Order #1 -> Escort #3 | Dist: 369.31m | Flight Time: 2.09s | Reload Time: 9.39s | Total Simulation Time: 11.48s
-Attack Order #2 -> Escort #5 | Dist: 1050.89m | Flight Time: 5.94s | Reload Time: 9.39s | Total Simulation Time: 26.82s
-Attack Order #3 -> Escort #4 | Dist: 1593.16m | Flight Time: 9.01s | Reload Time: 9.39s | Total Simulation Time: 45.23s
-Attack Order #4 -> Escort #1 | Dist: 1585.14m | Flight Time: 8.97s | Reload Time: 9.39s | Total Simulation Time: 63.59s
-Attack Order #5 -> Escort #2 | Dist: 2561.70m | Flight Time: 14.49s | Reload Time: 9.39s | Total Simulation Time: 87.48s
---- Step 2 [Position: (300.00, 1800.00)] ---
---- Step 3 [Position: (1700.00, 1550.00)] ---
---- Step 4 [Position: (2000.00, 2500.00)] ---
+--- Step 1 [Position: (500.00, 500.00)] ---
+Attack Order #1 -> Escort #11 | Dist: 765.95m | Flight Time: 4.33s | Reload Time: 8.29s | Total Simulation Time: 12.62s
+Attack Order #2 -> Escort #8 | Dist: 864.22m | Flight Time: 4.89s | Reload Time: 8.29s | Total Simulation Time: 25.80s
+Attack Order #3 -> Escort #9 | Dist: 1318.32m | Flight Time: 7.46s | Reload Time: 8.29s | Total Simulation Time: 41.54s
+Attack Order #4 -> Escort #5 | Dist: 2225.38m | Flight Time: 12.59s | Reload Time: 8.29s | Total Simulation Time: 62.42s
+Attack Order #5 -> Escort #4 | Dist: 3878.84m | Flight Time: 21.94s | Reload Time: 8.29s | Total Simulation Time: 92.65s
+Attack Order #6 -> Escort #7 | Dist: 4457.06m | Flight Time: 25.21s | Reload Time: 8.29s | Total Simulation Time: 126.15s
+Attack Order #7 -> Escort #10 | Dist: 4798.14m | Flight Time: 27.14s | Reload Time: 8.29s | Total Simulation Time: 161.58s
+Attack Order #8 -> Escort #3 | Dist: 6237.95m | Flight Time: 35.29s | Reload Time: 8.29s | Total Simulation Time: 205.15s
+--- Step 2 [Position: (1800.00, 1800.00)] ---
+Attack Order #9 -> Escort #14 | Dist: 5355.28m | Flight Time: 30.29s | Reload Time: 8.29s | Total Simulation Time: 243.74s
+Attack Order #10 -> Escort #12 | Dist: 6191.99m | Flight Time: 35.03s | Reload Time: 8.29s | Total Simulation Time: 287.05s
+Attack Order #11 -> Escort #2 | Dist: 6254.99m | Flight Time: 35.38s | Reload Time: 8.29s | Total Simulation Time: 330.72s
+Attack Order #12 -> Escort #6 | Dist: 5627.44m | Flight Time: 31.83s | Reload Time: 8.29s | Total Simulation Time: 370.84s
+Attack Order #13 -> Escort #13 | Dist: 4792.02m | Flight Time: 27.11s | Reload Time: 8.29s | Total Simulation Time: 406.24s
+--- Step 3 [Position: (3200.00, 3200.00)] ---
+Attack Order #14 -> Escort #1 | Dist: 5777.05m | Flight Time: 32.68s | Reload Time: 8.29s | Total Simulation Time: 447.21s
+Attack Order #15 -> Escort #15 | Dist: 5508.13m | Flight Time: 31.16s | Reload Time: 8.29s | Total Simulation Time: 486.65s
+--- Step 4 [Position: (4500.00, 4500.00)] ---
 
-Result: Battleship USS Iowa SURVIVED all 4 path steps! (Remaining Health: 86.00%)
-Total Escorts Destroyed: 5 / 5
-Total Battle Time: 87.48s
+Result: Battleship USS Iowa SURVIVED all 4 path steps! (Remaining Health: 44.00%)
+Total Escorts Destroyed: 15 / 15
+Total Battle Time: 486.65s

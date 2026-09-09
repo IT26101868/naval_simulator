@@ -1,5 +1,5 @@
 ******* Part 2-B Simulation Results *******
-Battleship Reload Time: 2.20s
+Battleship Reload Time: 3.44s
 Escortship Reload Time: 
   - Type A: 4.00s
   - Type B: 6.00s
@@ -9,30 +9,21 @@ Escortship Reload Time:
 Attack and Continuous Fire Strategy: Battleship prioritizes targets based on Threat Level (Impact Power / Distance)
 
 --- Step 1 [Position: (500.00, 500.00)] ---
->>> Escort Ship #2 FIRED! | Damage: 6.00% | Battleship Health: 94.00% | Time: 0.00s
->>> Escort Ship #7 FIRED! | Damage: 6.00% | Battleship Health: 88.00% | Time: 0.00s
->>> Escort Ship #10 FIRED! | Damage: 8.00% | Battleship Health: 80.00% | Time: 0.00s
-Attack Order #1 -> Escort #10 | Dist: 2521.44m | Flight Time: 14.26s | Reload Time: 2.20s | Simulation Time: 16.46s
->>> Escort Ship #2 FIRED! | Damage: 6.00% | Battleship Health: 74.00% | Time: 16.46s
->>> Escort Ship #7 FIRED! | Damage: 6.00% | Battleship Health: 68.00% | Time: 16.46s
-Attack Order #2 -> Escort #4 | Dist: 1860.70m | Flight Time: 10.53s | Reload Time: 2.20s | Simulation Time: 29.19s
->>> Escort Ship #2 FIRED! | Damage: 6.00% | Battleship Health: 62.00% | Time: 29.19s
->>> Escort Ship #7 FIRED! | Damage: 6.00% | Battleship Health: 56.00% | Time: 29.19s
-Attack Order #3 -> Escort #7 | Dist: 4264.34m | Flight Time: 24.12s | Reload Time: 2.20s | Simulation Time: 55.51s
->>> Escort Ship #2 FIRED! | Damage: 6.00% | Battleship Health: 50.00% | Time: 55.51s
-Attack Order #4 -> Escort #2 | Dist: 4520.14m | Flight Time: 25.57s | Reload Time: 2.20s | Simulation Time: 83.28s
-Attack Order #5 -> Escort #5 | Dist: 5829.79m | Flight Time: 32.98s | Reload Time: 2.20s | Simulation Time: 118.45s
---- Step 2 [Position: (1800.00, 1800.00)] ---
->>> Escort Ship #6 FIRED! | Damage: 7.00% | Battleship Health: 43.00% | Time: 118.45s
-Attack Order #6 -> Escort #1 | Dist: 6269.73m | Flight Time: 35.47s | Reload Time: 2.20s | Simulation Time: 156.12s
->>> Escort Ship #6 FIRED! | Damage: 7.00% | Battleship Health: 36.00% | Time: 156.12s
---- Step 3 [Position: (3200.00, 3200.00)] ---
-Attack Order #7 -> Escort #6 | Dist: 5386.54m | Flight Time: 30.47s | Reload Time: 2.20s | Simulation Time: 188.79s
-Attack Order #8 -> Escort #3 | Dist: 5854.48m | Flight Time: 33.12s | Reload Time: 2.20s | Simulation Time: 224.11s
-Attack Order #9 -> Escort #9 | Dist: 6240.35m | Flight Time: 35.30s | Reload Time: 2.20s | Simulation Time: 261.60s
-Attack Order #10 -> Escort #8 | Dist: 5947.45m | Flight Time: 33.64s | Reload Time: 2.20s | Simulation Time: 297.45s
---- Step 4 [Position: (4500.00, 4500.00)] ---
-
-Result: Battleship USS Iowa SURVIVED the attack! | Remaining health: 36.00%
-Total Escorts Destroyed: 10 / 10
-Total Battle Time: 297.45s
+>>> Escort Ship #3 FIRED! | Damage: 6.00% | Battleship Health: 94.00% | Time: 0.00s
+>>> Escort Ship #5 FIRED! | Damage: 8.00% | Battleship Health: 86.00% | Time: 0.00s
+>>> Escort Ship #10 FIRED! | Damage: 8.00% | Battleship Health: 78.00% | Time: 0.00s
+>>> Escort Ship #11 FIRED! | Damage: 6.00% | Battleship Health: 72.00% | Time: 0.00s
+>>> Escort Ship #12 FIRED! | Damage: 7.00% | Battleship Health: 65.00% | Time: 0.00s
+>>> Escort Ship #13 FIRED! | Damage: 7.00% | Battleship Health: 58.00% | Time: 0.00s
+>>> Escort Ship #14 FIRED! | Damage: 8.00% | Battleship Health: 50.00% | Time: 0.00s
+>>> Escort Ship #16 FIRED! | Damage: 8.00% | Battleship Health: 42.00% | Time: 0.00s
+Attack Order #1 -> Escort #3 | Dist: 1215.48m | Flight Time: 7.47s | Reload Time: 3.44s | Simulation Time: 10.91s
+>>> Escort Ship #5 FIRED! | Damage: 8.00% | Battleship Health: 34.00% | Time: 10.91s
+>>> Escort Ship #10 FIRED! | Damage: 8.00% | Battleship Health: 26.00% | Time: 10.91s
+>>> Escort Ship #11 FIRED! | Damage: 6.00% | Battleship Health: 20.00% | Time: 10.91s
+>>> Escort Ship #12 FIRED! | Damage: 7.00% | Battleship Health: 13.00% | Time: 10.91s
+>>> Escort Ship #13 FIRED! | Damage: 7.00% | Battleship Health: 6.00% | Time: 10.91s
+>>> Escort Ship #14 FIRED! | Damage: 8.00% | Battleship Health: -2.00% | Time: 10.91s
+Result: Battleship Sovetsky Soyux-Class WAS SUNK by Escort Ship #14 at step 1!
+Total Escorts Destroyed: 1 / 16
+Total Battle Time: 10.91s

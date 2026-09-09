@@ -542,7 +542,7 @@ void run_part2c_simulation(Battleship b, EscortShip ships[], int n, EscortType t
             simulation_time += time_to_hit + b.reload_time;
                     
             printf( "  [STRATEGY] Target Priority Selectd: Escort Ship #%d (Type: %c | Dist: %.2fm)\n", ships[target_index].id, types[ships[target_index].type_index].notation, dist);
-            printf (" --> [Time : %.2fs] Battleship FIRED at Escort #%d! (Flight : %.2f | Reload : %.2fs \n)", simulation_time, ships[target_index].id, time_to_hit, b.reload_time);
+            printf (" --> [Time : %.2fs] Battleship FIRED at Escort #%d! (Flight : %.2f | Reload : %.2fs )\n", simulation_time, ships[target_index].id, time_to_hit, b.reload_time);
             fprintf( file, "Attack Order #%d -> Escort #%d | Dist : %.2fm | Flight Time : %.2fs | Reload Time : %.2fs | Simulation Time : %.2f\n", b.firings_count, ships[target_index].id, dist, time_to_hit, b.reload_time, simulation_time);
         }
     }

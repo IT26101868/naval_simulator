@@ -3,36 +3,25 @@ Mechanic : Exponential Impact Power Decay ( IP_n = IP_o * e^(-gamma*n))
 
 
 --- Step 1 [Position : (500.00, 500.00)---
->>>Escort Ship #4 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0663) | Damage : 6.63% | Health : 93.37%
->>>Escort Ship #6 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 85.76%
->>>Escort Ship #8 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0565) | Damage : 5.65% | Health : 80.11%
-Attack Order #1 -> Escort #6 | Dist : 4964.62m | Flight Time : 28.08s | Reload Time : 4.39s | Simulation Time : 32.48
->>>Escort Ship #4 HIT Battleship ! Time : 32.48 | Shot #2 (Decayed IP : 0.0627) | Damage : 6.27% | Health : 73.84%
->>>Escort Ship #8 HIT Battleship ! Time : 32.48 | Shot #2 (Decayed IP : 0.0532) | Damage : 5.32% | Health : 68.52%
-Attack Order #2 -> Escort #8 | Dist : 5437.11m | Flight Time : 30.76s | Reload Time : 4.39s | Simulation Time : 67.63
->>>Escort Ship #4 HIT Battleship ! Time : 67.63 | Shot #3 (Decayed IP : 0.0594) | Damage : 5.94% | Health : 62.59%
-Attack Order #3 -> Escort #10 | Dist : 5085.42m | Flight Time : 28.77s | Reload Time : 4.39s | Simulation Time : 100.79
->>>Escort Ship #4 HIT Battleship ! Time : 100.79 | Shot #4 (Decayed IP : 0.0562) | Damage : 5.62% | Health : 56.97%
+>>>Escort Ship #1 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 92.39%
+>>>Escort Ship #2 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0663) | Damage : 6.63% | Health : 85.76%
+>>>Escort Ship #4 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 78.15%
+>>>Escort Ship #12 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0663) | Damage : 6.63% | Health : 71.53%
+>>>Escort Ship #14 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 63.92%
+>>>Escort Ship #17 HIT Battleship ! Time : 0.00 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 56.31%
+Attack Order #1 -> Escort #17 | Dist : 1564.64m | Flight Time : 8.85s | Reload Time : 7.22s | Simulation Time : 16.07
+>>>Escort Ship #1 HIT Battleship ! Time : 16.07 | Shot #2 (Decayed IP : 0.0724) | Damage : 7.24% | Health : 49.07%
+>>>Escort Ship #2 HIT Battleship ! Time : 16.07 | Shot #2 (Decayed IP : 0.0627) | Damage : 6.27% | Health : 42.80%
+>>>Escort Ship #4 HIT Battleship ! Time : 16.07 | Shot #2 (Decayed IP : 0.0724) | Damage : 7.24% | Health : 35.56%
+>>>Escort Ship #12 HIT Battleship ! Time : 16.07 | Shot #2 (Decayed IP : 0.0627) | Damage : 6.27% | Health : 29.29%
+>>>Escort Ship #14 HIT Battleship ! Time : 16.07 | Shot #2 (Decayed IP : 0.0724) | Damage : 7.24% | Health : 22.05%
+Attack Order #2 -> Escort #1 | Dist : 4949.51m | Flight Time : 28.00s | Reload Time : 7.22s | Simulation Time : 51.29
+>>>Escort Ship #2 HIT Battleship ! Time : 51.29 | Shot #3 (Decayed IP : 0.0594) | Damage : 5.94% | Health : 16.12%
+>>>Escort Ship #4 HIT Battleship ! Time : 51.29 | Shot #3 (Decayed IP : 0.0689) | Damage : 6.89% | Health : 9.23%
+>>>Escort Ship #12 HIT Battleship ! Time : 51.29 | Shot #3 (Decayed IP : 0.0594) | Damage : 5.94% | Health : 3.30%
+>>>Escort Ship #14 HIT Battleship ! Time : 51.29 | Shot #3 (Decayed IP : 0.0689) | Damage : 6.89% | Health : -3.59%
+Result : Battleship USS Iowa WAS SUNK by Escort Ship #14 at step 1! 
 
---- Step 2 [Position : (1800.00, 1800.00)---
-Attack Order #4 -> Escort #4 | Dist : 5373.70m | Flight Time : 30.40s | Reload Time : 4.39s | Simulation Time : 135.58
+Total Escort Destroyed : 2 / 17
 
---- Step 3 [Position : (3200.00, 3200.00)---
->>>Escort Ship #7 HIT Battleship ! Time : 135.58 | Shot #1 (Decayed IP : 0.0761) | Damage : 7.61% | Health : 49.36%
-Attack Order #5 -> Escort #9 | Dist : 5874.18m | Flight Time : 33.23s | Reload Time : 4.39s | Simulation Time : 173.21
->>>Escort Ship #7 HIT Battleship ! Time : 173.21 | Shot #2 (Decayed IP : 0.0724) | Damage : 7.24% | Health : 42.12%
-Attack Order #6 -> Escort #1 | Dist : 5259.86m | Flight Time : 29.75s | Reload Time : 4.39s | Simulation Time : 207.36
->>>Escort Ship #7 HIT Battleship ! Time : 207.36 | Shot #3 (Decayed IP : 0.0689) | Damage : 6.89% | Health : 35.23%
-Attack Order #7 -> Escort #2 | Dist : 5710.12m | Flight Time : 32.30s | Reload Time : 4.39s | Simulation Time : 244.05
->>>Escort Ship #7 HIT Battleship ! Time : 244.05 | Shot #4 (Decayed IP : 0.0655) | Damage : 6.55% | Health : 28.68%
-
---- Step 4 [Position : (4500.00, 4500.00)---
-Attack Order #8 -> Escort #7 | Dist : 5273.90m | Flight Time : 29.83s | Reload Time : 4.39s | Simulation Time : 278.28
-Attack Order #9 -> Escort #5 | Dist : 4911.48m | Flight Time : 27.78s | Reload Time : 4.39s | Simulation Time : 310.46
-Attack Order #10 -> Escort #3 | Dist : 5902.49m | Flight Time : 33.39s | Reload Time : 4.39s | Simulation Time : 348.24
-
-Result: Battleship USS Iowa SURVIVED all 4 path steps! (Remaining Health : 28.68%)
-
-Total Escort Destroyed : 10 / 10
-
-Total Battle Time : 348.24s
+Total Battle Time : 51.29s

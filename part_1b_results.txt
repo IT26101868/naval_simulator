@@ -1,25 +1,33 @@
 *******Part 1-B Simulation Results*******
 Total Steps Taken: 4
-Battleship: USS Iowa (Notation: U) | (Position: (4500.00, 4500.00)) | Health: 71.00
+Battleship: Richelieu (Notation: R) | (Position: (4500.00, 4500.00)) | Health: 94.00
 Result: Battleship SURVIVED and reached the destination!
  -Escort Ships Status:
-  -Escort Ship #1: DESTROYED
+  -Escort Ship #1: SURVIVED | Position: (4804.04, 21857.34))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #2: SURVIVED | Position: (13080.67, 9942.14))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #3: SURVIVED | Position: (19720.76, 278.01))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #4: SURVIVED | Position: (15082.41, 6192.14))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #5: SURVIVED | Position: (6526.28, 16937.70))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #6: SURVIVED | Position: (9893.65, 21369.24))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #7: SURVIVED | Position: (18535.12, 33593.29))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #8: SURVIVED | Position: (23254.15, 39269.94))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #9: SURVIVED | Position: (4401.28, 25597.32))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #10: SURVIVED | Position: (24114.01, 32508.76))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #11: SURVIVED | Position: (645.65, 37312.80))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #12: SURVIVED | Position: (34788.17, 10393.47))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #13: SURVIVED | Position: (1001.67, 30114.24))
+  Total Escort Ships Destroyed: 0
+  -Escort Ship #14: DESTROYED
   Total Escort Ships Destroyed: 1
-  -Escort Ship #2: DESTROYED
-  Total Escort Ships Destroyed: 2
-  -Escort Ship #3: DESTROYED
-  Total Escort Ships Destroyed: 3
-  -Escort Ship #4: DESTROYED
-  Total Escort Ships Destroyed: 4
-  -Escort Ship #5: DESTROYED
-  Total Escort Ships Destroyed: 5
-  -Escort Ship #6: DESTROYED
-  Total Escort Ships Destroyed: 6
-  -Escort Ship #7: DESTROYED
-  Total Escort Ships Destroyed: 7
-  -Escort Ship #8: DESTROYED
-  Total Escort Ships Destroyed: 8
-  -Escort Ship #9: DESTROYED
-  Total Escort Ships Destroyed: 9
-  -Escort Ship #10: DESTROYED
-  Total Escort Ships Destroyed: 10
